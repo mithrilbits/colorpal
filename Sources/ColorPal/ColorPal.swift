@@ -237,7 +237,7 @@ extension ColorPal {
     */
     private func sampleColorWithDefault(sample: Sample?, color: UIColor) -> UIColor {
         if let sample = sample {
-            return sample.color
+            return sample.uiColor
         }
         return color
     }

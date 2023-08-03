@@ -35,7 +35,7 @@ class SampleTests: XCTestCase {
     }
     
     func testInitColor() {
-        XCTAssertEqual(sample.color, UIColor.black)
+        XCTAssertEqual(sample.uiColor, UIColor.black)
     }
     
     func testPopulation() {

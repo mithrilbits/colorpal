@@ -21,6 +21,7 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 // MARK: - Sample struct
 
@@ -44,10 +45,17 @@ public struct Sample {
     */
     private let colorInformation: ColorInformation
     /**
-        The color object represented by this Sample
+        The UIColor object represented by this Sample
     */
-    public var color: UIColor {
+    public var uiColor: UIColor {
         return colorInformation.color
+    }
+    /**
+        The Color object represented by this Sample
+    */
+    @available(iOS 13.0, *)
+    public var color: Color {
+        return Color(colorInformation.color)
     }
     /**
         The population of the color represented by this Sample

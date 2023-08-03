@@ -43,11 +43,11 @@ class SampleTests: XCTestCase {
     }
     
     func testTitleTextColor() {
-        XCTAssertNotNil(sample.titleTextColor)
+        XCTAssertNotNil(sample.titleTextUIColor)
     }
     
     func testBodyTextColor() {
-        XCTAssertNotNil(sample.bodyTextColor)
+        XCTAssertNotNil(sample.bodyTextUIColor)
     }
     
     func testEqual() {

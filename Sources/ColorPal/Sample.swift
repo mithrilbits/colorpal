@@ -79,12 +79,31 @@ public struct Sample {
         An appropriate title text color to overlay on top of this sample. The color will be either black or white with 
         alpha applied.
     */
-    public let titleTextColor: UIColor
+    public let titleTextUIColor: UIColor
+    
+    /**
+        An appropriate title text color to overlay on top of this sample. The color will be either black or white with
+        alpha applied.
+    */
+    @available(iOS 13.0, *)
+    public var titleTextColor: Color {
+        return Color(titleTextUIColor)
+    }
+    
     /**
         An appropriate body text color to overlay on top of this sample. The color will be either black or white with 
         alpha applied.
     */
-    public let bodyTextColor: UIColor
+    public let bodyTextUIColor: UIColor
+    
+    /**
+        An appropriate body text color to overlay on top of this sample. The color will be either black or white with
+        alpha applied.
+    */
+    @available(iOS 13.0, *)
+    public var bodyTextColor: Color {
+        return Color(bodyTextUIColor)
+    }
     
     /**
         Initialize a sample object.
@@ -98,8 +117,8 @@ public struct Sample {
     init(color: UIColor, population: Int) {
         colorInformation = ColorInformation(color: color, population: population)
         
-        self.titleTextColor = color.contrastingTextColorFor(minimumContrastRatio: Sample.titleTextMinimumContrastRatio)
-        self.bodyTextColor = color.contrastingTextColorFor(minimumContrastRatio: Sample.bodyTextMinimumContrastRatio)
+        self.titleTextUIColor = color.contrastingTextColorFor(minimumContrastRatio: Sample.titleTextMinimumContrastRatio)
+        self.bodyTextUIColor = color.contrastingTextColorFor(minimumContrastRatio: Sample.bodyTextMinimumContrastRatio)
     }
     
     /**
